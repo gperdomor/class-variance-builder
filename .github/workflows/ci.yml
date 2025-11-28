@@ -34,7 +34,7 @@ jobs:
       - run: pnpm dlx nx start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="build"
 
       # Cache node_modules
-      - uses: actions/setup-node@367970386b6680e836c920edcc9db747ca65d00a
+      - uses: actions/setup-node@b9b25d45f70a5d94d88496aa4896bf9ed8f49b67
         with:
           node-version-file: 'mise.toml'
           cache: 'pnpm'
