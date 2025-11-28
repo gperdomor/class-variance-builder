@@ -3,15 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx run-many --target build",
     "check-format": "nx format:check --all",
     "check-lock-files": "node ./tools/scripts/check-lock-files.mjs",
     "commit": "cz",
-    "local-registry": "nx local-registry @cvb/source",
-    "nx-release": "nx nx-release @cvb/source",
-    "preinstall": "node ./tools/scripts/preinstall.mjs",
-    "prepare": "husky || true",
-    "test": "nx run-many -t test"
+    "preinstall": "node ./tools/scripts/preinstall.mjs"
   },
   "private": true,
   "dependencies": {
@@ -69,11 +64,10 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
-    "husky": "9.1.7",
     "jiti": "2.4.2",
     "jsdom": "22.1.0",
     "jsonc-eslint-parser": "2.4.0",
-    "lint-staged": "16.0.0",
+    "lefthook": "2.0.4",
     "nx": "22.1.3",
     "postcss": "8.5.3",
     "prettier": "2.8.8",
