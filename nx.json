@@ -12,14 +12,12 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "67f33049d60c4b6f9df0c03b",
+  "nxCloudId": "692999e8919b81f72a0b18f9",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
       "options": {
-        "typecheck": {
-          "targetName": "typecheck"
-        },
+        "typecheck": { "targetName": "typecheck" },
         "build": {
           "targetName": "build",
           "configName": "tsconfig.lib.json",
@@ -42,12 +40,7 @@
         "watchDepsTargetName": "watch-deps"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/next/plugin",
       "options": {
@@ -64,33 +57,11 @@
     "projects": ["packages/*"],
     "version": {
       "preVersionCommand": "pnpm exec nx run-many -t build",
-      "versionActionsOptions": {
-        "skipLockFileUpdate": true
-      }
+      "versionActionsOptions": { "skipLockFileUpdate": true }
     },
-    "conventionalCommits": {
-      "types": {
-        "docs": true,
-        "chore": true
-      }
-    },
-    "changelog": {
-      "workspaceChangelog": {
-        "createRelease": "github"
-      }
-    }
+    "conventionalCommits": { "types": { "docs": true, "chore": true } },
+    "changelog": { "workspaceChangelog": { "createRelease": "github" } }
   },
-  "targetDefaults": {
-    "test": {
-      "dependsOn": ["^build"]
-    }
-  },
-  "generators": {
-    "@nx/next": {
-      "application": {
-        "style": "tailwind",
-        "linter": "eslint"
-      }
-    }
-  }
+  "targetDefaults": { "test": { "dependsOn": ["^build"] } },
+  "generators": { "@nx/next": { "application": { "style": "tailwind", "linter": "eslint" } } }
 }
