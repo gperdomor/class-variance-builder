@@ -42,7 +42,7 @@ export const defineConfig: DefineConfig = (options) => {
       const variantClassNames = getVariantClassNames(props, variants, defaultVariants);
       const compoundVariantClassNames = getCompoundVariantClassNames(
         compoundVariants,
-        mergeDefaultsAndProps(props, defaultVariants)
+        mergeDefaultsAndProps(props, defaultVariants),
       );
 
       return cx(base, variantClassNames, compoundVariantClassNames, props?.class ?? props?.className);
@@ -63,9 +63,9 @@ export const defineConfig: DefineConfig = (options) => {
           getCompoundVariantClassNamesBySlot(
             slotKey,
             compoundVariants,
-            mergeDefaultsAndProps(propsWithoutClass, defaultVariants)
+            mergeDefaultsAndProps(propsWithoutClass, defaultVariants),
           ),
-          _class?.[slotKey] ?? className?.[slotKey]
+          _class?.[slotKey] ?? className?.[slotKey],
         );
       }
       return obj;

@@ -58,7 +58,7 @@ describe('svb', () => {
         example({
           // @ts-expect-error: This is not a valid variant and should be ignored
           aCheekyInvalidProp: 'lol',
-        })
+        }),
       ).toEqual({});
       expect(example({ class: 'adhoc-class' })).toEqual({});
       expect(example({ className: 'adhoc-className' })).toEqual({});
@@ -67,7 +67,7 @@ describe('svb', () => {
           class: 'adhoc-class',
           // @ts-expect-error: Only one of class or className is allowed, with class taking precedence
           className: 'adhoc-className',
-        })
+        }),
       ).toEqual({});
     });
 
@@ -81,7 +81,7 @@ describe('svb', () => {
         example({
           // @ts-expect-error: This is not a valid variant and should be ignored
           aCheekyInvalidProp: 'lol',
-        })
+        }),
       ).toEqual({
         root: '',
         dot: '',
@@ -99,7 +99,7 @@ describe('svb', () => {
           class: { root: 'adhoc-root-class', dot: 'adhoc-dot-class' },
           // @ts-expect-error: Only one of class or className is allowed, with class taking precedence
           className: { root: 'adhoc-root-classname', control: 'adhoc-dot-classname' },
-        })
+        }),
       ).toEqual({
         root: 'adhoc-root-class',
         dot: 'adhoc-dot-class',
@@ -113,14 +113,14 @@ describe('svb', () => {
       expect(
         example({
           aCheekyInvalidProp: 'lol',
-        })
+        }),
       ).toEqual({});
       expect(example({ class: { root: 'adhoc-class' } })).toEqual({});
       expect(example({ className: { root: 'adhoc-className' } })).toEqual({});
       expect(
         example({
           className: { root: 'adhoc-className' },
-        })
+        }),
       ).toEqual({});
     });
 
@@ -131,7 +131,7 @@ describe('svb', () => {
       expect(
         example({
           aCheekyInvalidProp: 'lol',
-        })
+        }),
       ).toEqual({});
       expect(example({ class: { root: 'adhoc-class' } })).toEqual({});
       expect(example({ className: { root: 'adhoc-className' } })).toEqual({});
@@ -140,7 +140,7 @@ describe('svb', () => {
           class: { root: 'adhoc-class' },
           // @ts-expect-error: Only one of class or className is allowed, with class taking precedence
           className: { root: 'adhoc-className' },
-        })
+        }),
       ).toEqual({});
     });
   });

@@ -4,15 +4,15 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig(() => ({
-  root: __dirname,
+  root: import.meta.dirname,
   cacheDir: '../../node_modules/.vite/packages/cvb',
-  plugins: [dts({ entryRoot: 'src', tsconfigPath: path.join(__dirname, 'tsconfig.lib.json') })],
+  plugins: [dts({ entryRoot: 'src', tsconfigPath: path.join(import.meta.dirname, 'tsconfig.lib.json') })],
   // Uncomment this if you are using workers.
   // worker: {
-  //  plugins: [ nxViteTsPaths() ],
+  //  plugins: [],
   // },
   // Configuration for building your library.
-  // See: https://vitejs.dev/guide/build.html#library-mode
+  // See: https://vite.dev/guide/build.html#library-mode
   build: {
     outDir: './dist',
     emptyOutDir: true,
@@ -24,7 +24,7 @@ export default defineConfig(() => ({
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
       name: 'cvb',
-      fileName: (format) => `index.${format === 'es' ? 'mjs' : format}`,
+      fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
       formats: ['es' as const, 'cjs' as const],
@@ -35,6 +35,7 @@ export default defineConfig(() => ({
     },
   },
   test: {
+    name: 'cvb',
     watch: false,
     globals: true,
     environment: 'node',
@@ -42,7 +43,6 @@ export default defineConfig(() => ({
     reporters: ['default'],
     coverage: {
       reportsDirectory: './test-output/vitest/coverage',
-      exclude: ['eslint.config.mjs', 'vite.config.ts', 'src/index.ts'],
       provider: 'v8' as const,
     },
   },

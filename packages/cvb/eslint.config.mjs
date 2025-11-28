@@ -9,7 +9,7 @@ export default [
         'error',
         {
           ignoredFiles: [
-            '{projectRoot}/eslint.config.{js,cjs,mjs}',
+            '{projectRoot}/eslint.config.{js,cjs,mjs,ts,cts,mts}',
             '{projectRoot}/vite.config.{js,ts,mjs,mts}',
             '{projectRoot}/benchmark/*.ts',
           ],
@@ -19,5 +19,8 @@ export default [
     languageOptions: {
       parser: await import('jsonc-eslint-parser'),
     },
+  },
+  {
+    ignores: ['**/out-tsc'],
   },
 ];

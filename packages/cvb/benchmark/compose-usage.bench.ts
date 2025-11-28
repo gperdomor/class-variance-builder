@@ -36,7 +36,7 @@ describe('Composition Usage', () => {
         () => {
           composed(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -44,7 +44,7 @@ describe('Composition Usage', () => {
         () => {
           composedCVA(config);
         },
-        benchOpts
+        benchOpts,
       );
     });
   });
@@ -67,7 +67,7 @@ describe('Composition Usage', () => {
         () => {
           complexComposed(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -75,7 +75,7 @@ describe('Composition Usage', () => {
         () => {
           complexComposedCVA(config);
         },
-        benchOpts
+        benchOpts,
       );
     });
   });

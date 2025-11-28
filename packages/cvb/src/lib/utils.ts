@@ -25,10 +25,10 @@ export const falsyToString = <T>(value: T) => (typeof value === 'boolean' ? `${v
 export const mergeDefaultsAndProps = <
   V extends RecipeVariantRecord,
   P extends RecipeSelection<V> & ClassProp,
-  D extends RecipeSelection<V>
+  D extends RecipeSelection<V>,
 >(
   props: P = {} as P,
-  defaults: D
+  defaults: D,
 ) => {
   const result: Record<PropertyKey, unknown> = { ...defaults };
 
@@ -52,11 +52,11 @@ export const mergeDefaultsAndProps = <
 export const getVariantClassNames = <
   V extends RecipeVariantRecord,
   P extends RecipeSelection<V> & ClassProp,
-  D extends RecipeSelection<V>
+  D extends RecipeSelection<V>,
 >(
   props: P = {} as P,
   variants: V,
-  defaults: D = {} as D
+  defaults: D = {} as D,
 ) => {
   let variantClassNames = '';
 
@@ -84,7 +84,7 @@ export const getVariantClassNames = <
  */
 export const getCompoundVariantClassNames = <V extends RecipeVariantRecord>(
   compoundVariants: Pretty<RecipeCompoundVariant<RecipeCompoundSelection<V>>>[],
-  defaultsAndProps: ClassDictionary
+  defaultsAndProps: ClassDictionary,
 ) => {
   let compoundClassNames = '';
 
@@ -127,12 +127,12 @@ export const getVariantClassNamesBySlot = <
   S extends string,
   V extends SlotRecipeVariantRecord<S>,
   P extends RecipeSelection<V> & ClassProp,
-  D extends RecipeSelection<V>
+  D extends RecipeSelection<V>,
 >(
   props: P = {} as P,
   slot: S,
   variants: V,
-  defaults: D = {} as D
+  defaults: D = {} as D,
 ) => {
   let variantClassNames = '';
 
@@ -160,11 +160,11 @@ export const getVariantClassNamesBySlot = <
  */
 export const getCompoundVariantClassNamesBySlot = <
   S extends string,
-  V extends SlotRecipeVariantRecord<S> = SlotRecipeVariantRecord<S>
+  V extends SlotRecipeVariantRecord<S> = SlotRecipeVariantRecord<S>,
 >(
   slot: S,
   compoundVariants: Pretty<SlotRecipeCompoundVariant<S, RecipeCompoundSelection<V>>>[],
-  defaultsAndProps: ClassDictionary
+  defaultsAndProps: ClassDictionary,
 ) => {
   let compoundClassNames = '';
 

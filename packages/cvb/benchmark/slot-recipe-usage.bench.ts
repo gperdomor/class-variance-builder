@@ -28,7 +28,7 @@ describe('Slot Recipe Usage', () => {
         () => {
           svbSimple(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -40,7 +40,7 @@ describe('Slot Recipe Usage', () => {
           title();
           description();
         },
-        benchOpts
+        benchOpts,
       );
     });
   });
@@ -58,7 +58,7 @@ describe('Slot Recipe Usage', () => {
         () => {
           svbComplex(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -71,7 +71,7 @@ describe('Slot Recipe Usage', () => {
           body();
           footer();
         },
-        benchOpts
+        benchOpts,
       );
     });
   });
@@ -89,7 +89,7 @@ describe('Slot Recipe Usage', () => {
         () => {
           svbLarge(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -139,7 +139,7 @@ describe('Slot Recipe Usage', () => {
           cardBody();
           cardFooter();
         },
-        benchOpts
+        benchOpts,
       );
     });
   });

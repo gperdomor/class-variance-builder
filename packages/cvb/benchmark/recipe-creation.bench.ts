@@ -15,7 +15,7 @@ describe('Recipe Creation', () => {
       () => {
         cvb(TEST_CASES.simple);
       },
-      benchOpts
+      benchOpts,
     );
 
     bench(
@@ -23,7 +23,7 @@ describe('Recipe Creation', () => {
       () => {
         cva(TEST_CASES.simple);
       },
-      benchOpts
+      benchOpts,
     );
   });
 
@@ -33,7 +33,7 @@ describe('Recipe Creation', () => {
       () => {
         cvb(TEST_CASES.complex);
       },
-      benchOpts
+      benchOpts,
     );
 
     bench(
@@ -41,7 +41,7 @@ describe('Recipe Creation', () => {
       () => {
         cva(TEST_CASES.complex);
       },
-      benchOpts
+      benchOpts,
     );
   });
 
@@ -51,7 +51,7 @@ describe('Recipe Creation', () => {
       () => {
         cvb(TEST_CASES.large);
       },
-      benchOpts
+      benchOpts,
     );
 
     bench(
@@ -59,7 +59,7 @@ describe('Recipe Creation', () => {
       () => {
         cva(TEST_CASES.large);
       },
-      benchOpts
+      benchOpts,
     );
   });
 });

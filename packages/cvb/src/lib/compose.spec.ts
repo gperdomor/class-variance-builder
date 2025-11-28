@@ -94,10 +94,10 @@ describe('compose', () => {
     expect(rounded({ size: 'sm' })).toBe('font-semibold py-1 px-3 text-sm rounded-md');
     expect(rounded({ size: 'md' })).toBe('font-semibold py-1 px-3 text-md rounded-md');
     expect(rounded({ size: 'sm', class: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-sm rounded-md adhoc-class'
+      'font-semibold py-1 px-3 text-sm rounded-md adhoc-class',
     );
     expect(rounded({ size: 'md', className: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md adhoc-class'
+      'font-semibold py-1 px-3 text-md rounded-md adhoc-class',
     );
     expect(rounded({ class: 'adhoc-class' })).toBe('font-semibold py-1 px-3 text-md rounded-md adhoc-class');
     expect(rounded({ className: 'adhoc-class' })).toBe('font-semibold py-1 px-3 text-md rounded-md adhoc-class');
@@ -121,16 +121,16 @@ describe('compose', () => {
     expect(colored({ size: 'md', color: 'indigo' })).toBe('font-semibold py-1 px-3 text-md rounded-md bg-indigo-500');
     expect(colored({ size: 'sm', color: 'red' })).toBe('font-semibold py-1 px-3 text-sm rounded-md bg-red-500');
     expect(colored({ size: 'sm', color: 'red', class: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-sm rounded-md bg-red-500 adhoc-class'
+      'font-semibold py-1 px-3 text-sm rounded-md bg-red-500 adhoc-class',
     );
     expect(colored({ size: 'md', color: 'blue', className: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class'
+      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class',
     );
     expect(colored({ class: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class'
+      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class',
     );
     expect(colored({ className: 'adhoc-classname' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-classname'
+      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-classname',
     );
   });
 
@@ -149,22 +149,22 @@ describe('compose', () => {
     expect(roundedAndColored({})).toBe('font-semibold py-1 px-3 text-md rounded-md bg-blue-500');
     expect(roundedAndColored({ size: 'sm' })).toBe('font-semibold py-1 px-3 text-sm rounded-md bg-blue-500');
     expect(roundedAndColored({ size: 'md', color: 'indigo' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-indigo-500'
+      'font-semibold py-1 px-3 text-md rounded-md bg-indigo-500',
     );
     expect(roundedAndColored({ size: 'sm', color: 'red' })).toBe(
-      'font-semibold py-1 px-3 text-sm rounded-md bg-red-500'
+      'font-semibold py-1 px-3 text-sm rounded-md bg-red-500',
     );
     expect(roundedAndColored({ size: 'sm', color: 'red', class: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-sm rounded-md bg-red-500 adhoc-class'
+      'font-semibold py-1 px-3 text-sm rounded-md bg-red-500 adhoc-class',
     );
     expect(roundedAndColored({ size: 'md', color: 'blue', className: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class'
+      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class',
     );
     expect(roundedAndColored({ class: 'adhoc-class' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class'
+      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-class',
     );
     expect(roundedAndColored({ className: 'adhoc-classname' })).toBe(
-      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-classname'
+      'font-semibold py-1 px-3 text-md rounded-md bg-blue-500 adhoc-classname',
     );
   });
 });

@@ -18,7 +18,7 @@ describe('Slot Recipe Creation', () => {
       () => {
         svb(SLOT_TEST_CASES.simple);
       },
-      benchOpts
+      benchOpts,
     );
 
     bench(
@@ -26,7 +26,7 @@ describe('Slot Recipe Creation', () => {
       () => {
         tv(tvConfig as any);
       },
-      benchOpts
+      benchOpts,
     );
   });
 
@@ -38,7 +38,7 @@ describe('Slot Recipe Creation', () => {
       () => {
         svb(SLOT_TEST_CASES.complex);
       },
-      benchOpts
+      benchOpts,
     );
 
     bench(
@@ -46,7 +46,7 @@ describe('Slot Recipe Creation', () => {
       () => {
         tv(tvConfig as any);
       },
-      benchOpts
+      benchOpts,
     );
   });
 
@@ -58,7 +58,7 @@ describe('Slot Recipe Creation', () => {
       () => {
         svb(SLOT_TEST_CASES.large);
       },
-      benchOpts
+      benchOpts,
     );
 
     bench(
@@ -66,7 +66,7 @@ describe('Slot Recipe Creation', () => {
       () => {
         tv(tvConfig as any);
       },
-      benchOpts
+      benchOpts,
     );
   });
 });

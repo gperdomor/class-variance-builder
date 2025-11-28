@@ -26,7 +26,7 @@ describe('Recipe Usage', () => {
         () => {
           cvbSimple(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -34,7 +34,7 @@ describe('Recipe Usage', () => {
         () => {
           cvaSimple(config);
         },
-        benchOpts
+        benchOpts,
       );
     });
   });
@@ -56,7 +56,7 @@ describe('Recipe Usage', () => {
         () => {
           cvbComplex(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -64,7 +64,7 @@ describe('Recipe Usage', () => {
         () => {
           cvaComplex(config);
         },
-        benchOpts
+        benchOpts,
       );
     });
   });
@@ -82,7 +82,7 @@ describe('Recipe Usage', () => {
         () => {
           cvbLarge(config);
         },
-        benchOpts
+        benchOpts,
       );
 
       bench(
@@ -90,7 +90,7 @@ describe('Recipe Usage', () => {
         () => {
           cvaLarge(config);
         },
-        benchOpts
+        benchOpts,
       );
     });
   });
