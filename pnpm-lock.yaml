@@ -73,8 +73,8 @@ importers:
         specifier: 9.39.1
         version: 9.39.1
       '@next/bundle-analyzer':
-        specifier: 15.3.2
-        version: 15.3.2
+        specifier: 16.0.3
+        version: 16.0.3
       '@next/eslint-plugin-next':
         specifier: 16.0.5
         version: 16.0.5
@@ -1650,8 +1650,8 @@ packages:
   '@napi-rs/wasm-runtime@1.0.7':
     resolution: {integrity: sha512-SeDnOO0Tk7Okiq6DbXmmBODgOAb9dp9gjlphokTUxmt8U3liIP1ZsozBahH69j/RJv+Rfs6IwUKHTgQYJ/HBAw==}
 
-  '@next/bundle-analyzer@15.3.2':
-    resolution: {integrity: sha512-zY5O1PNKNxWEjaFX8gKzm77z2oL0cnj+m5aiqNBgay9LPLCDO13Cf+FJONeNq/nJjeXptwHFT9EMmTecF9U4Iw==}
+  '@next/bundle-analyzer@16.0.3':
+    resolution: {integrity: sha512-6Xo8f8/ZXtASfTPa6TH1aUn+xDg9Pkyl1YHVxu+89cVdLH7MnYjxv3rPOfEJ9BwCZCU2q4Flyw5MwltfD2pGbA==}
 
   '@next/env@16.0.5':
     resolution: {integrity: sha512-jRLOw822AE6aaIm9oh0NrauZEM0Vtx5xhYPgqx89txUmv/UmcRwpcXmGeQOvYNT/1bakUwA+nG5CA74upYVVDw==}
@@ -11433,7 +11433,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@next/bundle-analyzer@15.3.2':
+  '@next/bundle-analyzer@16.0.3':
     dependencies:
       webpack-bundle-analyzer: 4.10.1
     transitivePeerDependencies:
@@ -13823,7 +13823,7 @@ snapshots:
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
 
   acorn@8.14.1: {}
 
@@ -15291,7 +15291,7 @@ snapshots:
   esast-util-from-js@2.0.1:
     dependencies:
       '@types/estree-jsx': 1.0.5
-      acorn: 8.14.1
+      acorn: 8.15.0
       esast-util-from-estree: 2.0.0
       vfile-message: 4.0.2
 
@@ -20027,7 +20027,7 @@ snapshots:
   terser@5.39.2:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.14.1
+      acorn: 8.15.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -20576,7 +20576,7 @@ snapshots:
   webpack-bundle-analyzer@4.10.1:
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      acorn: 8.14.1
+      acorn: 8.15.0
       acorn-walk: 8.3.4
       commander: 7.2.0
       debounce: 1.2.1
